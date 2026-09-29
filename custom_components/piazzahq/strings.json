@@ -1,0 +1,35 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Piazza HQ",
+        "description": "Generate an automation token in Piazza HQ under Settings → Home Assistant Control, then enter it here along with the device's address.",
+        "data": {
+          "host": "Host (IP address or hostname)",
+          "port": "Port",
+          "token": "Automation Token"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach that host and port. Check the address and that Piazza HQ is running.",
+      "invalid_auth": "That automation token was rejected. Regenerate it in Piazza HQ's Settings if needed.",
+      "unknown": "Unexpected error. Check the Home Assistant logs for details."
+    },
+    "abort": {
+      "already_configured": "This Piazza HQ device is already configured."
+    }
+  },
+  "entity": {
+    "switch": {
+      "screen_power": {
+        "name": "Power"
+      }
+    },
+    "select": {
+      "display_layout": {
+        "name": "Layout"
+      }
+    }
+  }
+}
